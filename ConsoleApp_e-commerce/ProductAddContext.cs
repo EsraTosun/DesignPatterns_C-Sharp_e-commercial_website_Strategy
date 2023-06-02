@@ -8,9 +8,9 @@ namespace ConsoleApp_e_commerce
 {
     class ProductAddContext : IProductAdd
     {
-        Dress dress = new Dress();
-        Pants pants = new Pants();
-        Tshirt tshirt = new Tshirt();
+        IProductAdd dress = new Dress();
+        IProductAdd pants = new Pants();
+        IProductAdd tshirt = new Tshirt();
 
         public void ProductAdd()
         {

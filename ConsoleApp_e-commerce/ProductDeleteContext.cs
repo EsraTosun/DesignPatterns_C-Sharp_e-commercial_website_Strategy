@@ -8,9 +8,9 @@ namespace ConsoleApp_e_commerce
 {
     class ProductDeleteContext : IProductDelete
     {
-        Dress dress = new Dress();
-        Pants pants = new Pants();
-        Tshirt tshirt = new Tshirt();
+        IProductDelete dress = new Dress();
+        IProductDelete pants = new Pants();
+        IProductDelete tshirt = new Tshirt();
 
         public void ProductDelete()
         {

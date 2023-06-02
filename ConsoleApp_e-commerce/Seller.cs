@@ -17,13 +17,13 @@ namespace ConsoleApp_e_commerce
         Logout = 5,
     }
 
-    class Seller : User, ISeller
+    class Seller : User, ISeller, IUserAdd
     {
         int transaction = -1;
         public static int index = 0;
 
-        public static ProductAddContext productAddContext = new ProductAddContext();
-        public static ProductDeleteContext productDeleteContext = new ProductDeleteContext();
+        public static IProductAdd productAddContext = new ProductAddContext();
+        public static IProductDelete productDeleteContext = new ProductDeleteContext();
         public static String productsType;
 
         public static Products products = new Products();
@@ -66,6 +66,29 @@ namespace ConsoleApp_e_commerce
 
                 return Products.ProductsTypelist[transactions];
             }
+        }
+
+        public void UserAdd()
+        {
+            User passing = new User();
+
+            Console.WriteLine("Name your enter");
+            passing.Name = Console.ReadLine();
+            Console.WriteLine("Surname your enter");
+            passing.Surname = Console.ReadLine();
+            Console.WriteLine("E-mail your enter");
+            passing.EmailAddress = Console.ReadLine();
+            Console.WriteLine("Password your enter");
+            passing.Password = Console.ReadLine();
+            Console.WriteLine("Phonename your enter");
+            passing.PhoneNumber = Console.ReadLine();
+            Console.WriteLine("Adress your enter");
+            passing.Adress = Console.ReadLine();
+            login = true;
+
+            passing.ID = SellerList.Count + 200;
+            USERID = SellerList.Count + 200;
+            SellerList.Add(passing);
         }
     }
 }
