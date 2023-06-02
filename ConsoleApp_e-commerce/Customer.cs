@@ -15,7 +15,7 @@ namespace ConsoleApp_e_commerce
         Payment = 5,
         Logout = 6,
     }
-    class Customer:User, ICustomer  //Müşteri
+    class Customer:User, ICustomer, IUserAdd  //Müşteri
     {
         public static UserTransacions userTransacions = new UserTransacions();
         public static User user = new User();
@@ -57,6 +57,29 @@ namespace ConsoleApp_e_commerce
         public void PaymentTransaction()
         {
             Payment.PaymentListFinding();
+        }
+
+        public void UserAdd()
+        {
+            User passing = new User();
+
+            Console.WriteLine("Name your enter");
+            passing.Name = Console.ReadLine();
+            Console.WriteLine("Surname your enter");
+            passing.Surname = Console.ReadLine();
+            Console.WriteLine("E-mail your enter");
+            passing.EmailAddress = Console.ReadLine();
+            Console.WriteLine("Password your enter");
+            passing.Password = Console.ReadLine();
+            Console.WriteLine("Phonename your enter");
+            passing.PhoneNumber = Console.ReadLine();
+            Console.WriteLine("Adress your enter");
+            passing.Adress = Console.ReadLine();
+            login = true;
+
+            passing.ID = CustomerList.Count + 100;
+            USERID = CustomerList.Count + 100;
+            CustomerList.Add(passing);
         }
     }
 }

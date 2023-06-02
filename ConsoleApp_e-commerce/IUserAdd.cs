@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_e_commerce
 {
-    interface IProductDelete
+    interface IUserAdd
     {
-        void ProductDelete();
+        void UserAdd();
     }
 }

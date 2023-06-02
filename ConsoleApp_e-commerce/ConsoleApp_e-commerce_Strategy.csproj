@@ -46,6 +46,7 @@
     <Compile Include="Favorites.cs" />
     <Compile Include="IProductAdd.cs" />
     <Compile Include="IProductDelete.cs" />
+    <Compile Include="IUserAdd.cs" />
     <Compile Include="MyBasket.cs" />
     <Compile Include="BodyChart.cs" />
     <Compile Include="Brand.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Tshirt.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Seller.cs" />
+    <Compile Include="UserAddContext.cs" />
     <Compile Include="UserTransacions.cs" />
   </ItemGroup>
   <ItemGroup>
